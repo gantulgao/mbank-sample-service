@@ -1,0 +1,23 @@
+spring:
+  tag: ${CONFIG_TAG:/config}
+  application:
+    name: mbank-sample-service
+  profiles:
+    active:
+      - dev
+  jmx:
+    default-domain: ${spring.application.name}
+  cloud:
+    config:
+      uri: http://${CONFIG_HOST:localhost}:${CONFIG_PORT:8888}${spring.tag}
+      fail-past: true
+
+# http://localhost:8080/mbank-sample-service/swagger-ui.html
+#http://localhost:8080/swagger-ui.html
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    mn.mbank.sample.service: DEBUG
+
+

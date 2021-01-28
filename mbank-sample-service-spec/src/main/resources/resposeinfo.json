@@ -1,0 +1,4 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "mn.mbank.core.domain.FinalResponse<mn.mbank.ganaa.service.spec.module.ResSample1>"
+}

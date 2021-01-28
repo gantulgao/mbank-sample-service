@@ -1,0 +1,24 @@
+#%RAML 0.8
+---
+title: RAML MBank SpringBoot API
+baseUri: https://www.mbank.mn/api
+version: v1.0
+mediaType: application/json
+
+schemas:
+  - responseInfo: !include resposeinfo.json
+
+/getSample:
+  description: "get sample data"
+  get:
+    description: "get sample data"
+    queryParameters:
+      regNum:
+        type: string
+        description: "get sample data"
+    responses:
+      200:
+        description: "get sample data"
+        body:
+          application/json:
+            schema: responseInfo
